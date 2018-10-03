@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Array Methods </title>
+</head>
+<style>
+    table { border-collapse: collapse; }
+    th { color: rgb(235, 252, 5); padding: 5px 5px; }
+    td { 
+        border: 1px solid rgb(30, 255, 0); 
+        padding: 5px 5px; 
+        text-align: center; 
+    }
+</style>
+<script>
+"use strict";
+function modify() {
+    let i = Number(ie.value); let x = xe.value; 
+    xe.value = a[i]; a[i] = x; reportA("a["+i+"] = "+x);
+}
+function remove() {
+    let i = Number(ie.value);
+    xe.value = a[i]; a.splice(i, 1); reportA("remove "+i);
+}
+function push() {
+    let x = xe.value; let i = Number(ie.value);
+    a.push(x); reportA("push "+x);
+}
+function pushB() {
+    let x = ye.value; let i = Number(ie.value);
+    b.push(x); reportB("push "+x    );
+}
+function popA() {
+    xe.value = a.pop(); reportA("pop ");
+}
+function reportA(str) {
+    outA.innerText = "a = [ "+ a.join(", ")+" ] "+a.length;
+    console.log(str);
+}
+function reportB(str) {
+    outB.innerText = "B = [ "+ b.join(", ")+" ] "+b.length;
+    console.log(str);
+}
+function createTable(tableData) {
+  var table = document.getElementById('table');
+  table.innerHTML="";
+  var tableBody = document.createElement('tbody');
+
+  tableData.forEach(function(rowData) {
+    var row = document.createElement('tr');
+
+    rowData.forEach(function(cellData) {
+      var cell = document.createElement('td');
+      cell.appendChild(document.createTextNode(cellData));
+      row.appendChild(cell);
+    });
+
+    tableBody.appendChild(row);
+  });
+
+  table.appendChild(tableBody);
+  document.body.appendChild(table);
+}
+function setLength(){
+     a.length =  arrayLength.value ;
+    reportA();
+}
+function setLengthB(){
+     b.length =  arrayBLength.value ;
+    reportB();
+}
+function tableDone(){
+
+    createTable([a,b]);
+}
+
+
+</script>
+
+<body>
+<h2 id=title></h2>
+
+<p id=outA></p>
+<p id=outB></p>
+
+<p>
+i = <input type=number id=ie value=1  style="width:40px"> &emsp; 
+x = <input type=text   id=xe value=53 style="width:99px"> &emsp;
+y = <input type=text   id=ye value=20 style="width:99px"> &emsp;
+
+A length = <input type=number   id=arrayLength value=0 style="width:99px"> 
+<br>
+b length = <input type=number   id=arrayBLength value=0 style="width:99px"> 
+
+</p><p>
+<input type=button value="a[i]=x"  onClick="modify()">
+<input type=button value="remove"  onClick="remove()">
+<input type=button value="push x to a"  onClick="push()">
+<input type=button value="x=pop"   onClick="popA()">
+<!-- added stuff -->
+<br>
+<input type=button value="push y to b"  onClick="pushB()">
+<input type=button value="Set length a"   onClick="setLength()">
+<input type=button value="Set length b"   onClick="setLengthB()">
+
+
+
+<input type=button value="buildTable"   onClick="tableDone()">
+
+</p>
+
+
+<hr />
+<p>Ref: 
+<a href="https://www.w3schools.com/js/js_arrays.asp" target="ExternalDocument">Array Examples</a></p>
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections" target="ExternalDocument">Set Examples</a>
+</p>
+<div id=table></div>
+<script>
+    title.innerText = document.title;
+    const a = [234, "abc", "son"];  //initially
+    const b = [567, "fff", "jjj" , "interesting"];  //initially
+    reportB("yay");
+
+    reportA("start");
+</script>
+
+</body>
+</html>
