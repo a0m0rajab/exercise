@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HW1</title>
+</head>
+<style>
+    table { border-collapse: collapse; }
+    th { color: rgb(235, 252, 5); padding: 5px 5px; }
+    td { 
+        border: 1px solid rgb(30, 255, 0); 
+        padding: 5px 5px; 
+        text-align: center; 
+    }
+</style>
+<script>
+"use strict";
+function add() {
+    let m = Number(CSmidterm.value); let f = Number(CSfinal.value); 
+    a.push({name:CSname.value,midterm:m,final:f});
+    t.push([CSname.value,m,f]);
+    console.log(a);
+}
+
+
+function avg() {
+    
+    avgtxt.innerHTML="Coruse \t average \n"
+
+    for(let i = 1 ; i < t.length ; i++){
+            t[i][3]=(t[i][1]+t[i][2])/2;
+            //console.log(t[i][3]);
+            avgtxt.innerHTML+=t[i][0]+"\t"+t[i][3]
+        
+        avgtxt.innerHTML+="<br>"
+
+    }
+}
+function max1() {
+    avg();
+    maxtxt.innerHTML="Coruse \t max \n"
+    let m = t[1]
+    for(let i = 1 ; i < t.length ; i++){
+          if(t[i][3]>m[3]){
+              m=t[i]
+          }
+
+    }
+    maxtxt.innerHTML+=m[0]+"\t"+m[3]
+    maxtxt.innerHTML+="<br>"
+}
+function print() {
+    printC.innerHTML= "Course &numsp; midterm &numsp; final"
+    for(let x=0 ;x < a.length ; x++){
+        printC.innerHTML+="\n"+ a[x].name+"&numsp;"+ a[x].midterm +"&numsp;"+ a[x].final +"\n"; 
+    }
+    createTable(t);
+
+}
+function createTable(tableData) {
+   avg();
+  var table = document.getElementById('table');
+  table.innerHTML="";
+  var tableBody = document.createElement('tbody');
+
+  tableData.forEach(function(rowData) {
+    var row = document.createElement('tr');
+
+    rowData.forEach(function(cellData) {
+      var cell = document.createElement('td');
+      cell.appendChild(document.createTextNode(cellData));
+      row.appendChild(cell);
+    });
+
+    tableBody.appendChild(row);
+  });
+
+  table.appendChild(tableBody);
+  //document.body.appendChild(table);
+  console.log("table created")
+}
+function show(){
+    let m = Number(CSmidterm.value); let f = Number(CSfinal.value); 
+
+    CSaverage.value= (m+f)/2;
+}
+</script>
+
+<body>
+<h2 id=title></h2>
+
+<p id=outA></p>
+<pre>
+    <!-- https://www.w3schools.com/js/js_validation.asp -->
+name: &numsp;&numsp; <input type=text id=CSname  style="width:20%" required> <br>
+Midterm: <input type=number id=CSmidterm  min="0" max="100" style="width:20%" required> <br>
+final: &numsp;&numsp;<input type=number onkeyup="show()" min="0" max="100" id=CSfinal style="width:20%" required> <br>
+Average: &numsp;&numsp;<output type=number id=CSaverage style="width:20%"> <br>
+
+
+</pre><p>
+<input type=button value="add"  onClick="add()">
+<br>
+<input type=button value="print"  onClick="print()">
+<input type=button value="max"  onClick="max1()">
+<input type=button value="avg"   onClick="avg()">
+</p>
+<hr>
+<pre id=printC>
+
+</pre>
+<hr>
+<pre id=avgtxt>
+
+</pre>
+<hr>
+<pre id=maxtxt>
+
+</pre>
+<hr >
+<div id =table></div>
+<hr />
+<div>
+    <p>Ref: 
+        <a href="https://www.w3schools.com/js/js_arrays.asp" target="ExternalDocument">Array Examples</a></p>
+        <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections" target="ExternalDocument">Set Examples</a>
+        </p>    
+</div>
+
+<script>
+    title.innerText = "Add course";
+    const a = [];  //initially
+    const t=[["course","midterm","final","average"]];
+    //  reportA("start");
+</script>
+
+</body>
+</html>
