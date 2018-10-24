@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://maeyler.github.io/JS/sss/inspector.css" 
+          rel="stylesheet" media="all">
+    <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
+    <script src="Database.js"></script>
+    <title>Inspector JavaScript </title>
+</head>
+
+<body>
+<p><b id=docName></b> &nbsp;
+<a href="https://maeyler.github.io/JS/sss/">Read me</a> &nbsp;
+<a href="https://maeyler.github.io/JS/sss/Turkish">Turkish</a>
+</p>
+
+<script>
+"use strict";
+class Point {
+    constructor(x,y){
+        this.x=x
+        this.y=y
+    }
+    toString(){
+        return "x= "+this.x+" y="+this.y
+    }
+   }
+class Point3D extends Point {
+    constructor(x,y,z){
+        super(x,y);
+        this.z=z;
+
+    }
+    toString(){
+        return "x= "+this.x+" y="+this.y+" z="+this.z
+    }}
+class Distance {
+    constructor(miles){
+        this.miles=miles;
+    }
+    get kilometer(){
+        return Math.round(this.miles * 1.60934);
+    }
+    set kilometer(km){
+        this.miles=  Math.round(km/1.60934)
+    }
+    toString(){
+        return "Miles ="+this.miles;
+    }
+    } 
+
+
+class CW4 extends Menu {
+  constructor() {
+    super();
+    this.course=new Course("fakeName","fakeTIme","FakeDate","FakeRooms");
+    this.student=new Student("fakeName","fakeTIme","FakeDate","FakeRooms")
+    this.pont=new Point(4,5);
+    this.point3D = new Point3D(this.pont,6);
+    this.distance = new Distance(10);
+  }
+
+}
+var a, b, c, code;  //global variables
+function init() {
+    let
+       len = 123, name = "Circle", pi = Math.PI, 
+       sqrt = Math.sqrt, power = Math.pow;
+    a = [0, 11, "22", "abc"];
+    c = {len, name, pi, sqrt, power};
+    
+    display(new CW4()); 
+    
+}
+    docName.innerText = "Inspector "+VERSION;
+    try {
+        inspect(document.body, init); //makes the table
+        //inp.value = "new Number(c.pi)";
+    } catch(e) {
+        reportError(e);
+    }
+</script>
+
+<p></p>
+<a href="../README.md">Site Map</a> &emsp;
+</p>
+
+
+</body>
+</html>
