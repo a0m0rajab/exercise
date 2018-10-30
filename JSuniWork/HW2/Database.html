@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DataBase homeWork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="Database.js"></script>
+</head>
+
+<body>
+
+    <form>
+        Select your query:
+        <select id="mySelect" onchange="choosen()">
+        </select>
+        <br><br>
+        <input type="text" id="inputData" value="">
+        <br>
+
+        <br><br>
+        <input type="button" onclick="show()" value="Get the query">
+    </form>
+
+    <p id="myData"></p>
+</body>
+
+<script>
+    let ar = [
+        "A random student"
+        , "Number of students above a given GPA",
+        "Courses taken by a given student",
+        "Exam schedule for a given student",
+        "Student list taking a given course",
+        "Course list for a given exam room",
+        "Total number of courses in a given room",
+        "One more query of your choice"]
+    ar.forEach(opt => {
+        let option = document.createElement("option");
+        option.text = opt;
+        document.getElementById("mySelect").add(option);
+
+    });
+
+    // document.getElementById('inum').type = 'number';
+
+
+    function choosen() {
+        let selectNo = document.getElementById("mySelect").selectedIndex;
+
+        if (selectNo == 0 || selectNo == 7) {
+            document.getElementById("inputData").style.display = 'none';
+        }
+        if (1 <= selectNo && selectNo < 4) {
+            document.getElementById("inputData").style.display = 'block';
+
+            document.getElementById("inputData").type = 'number';
+
+        }
+        if (4 <= selectNo && selectNo < 7) {
+            document.getElementById("inputData").style.display = 'block';
+
+            document.getElementById("inputData").type = 'text';
+
+        }
+    }
+
+
+    this.choosen();
+    function show() {
+        let selectNo = document.getElementById("mySelect").selectedIndex;
+        let p = document.getElementById("myData");
+        let given = document.getElementById("inputData").value;
+        switch (selectNo) {
+            case 0:
+                p.innerText = db.getRandomStudent();
+                break;
+            case 1:
+                p.innerText = db.getAboveGPA(given).size;
+                break;
+            case 2:
+                p.innerText = db.getStudentCourse(given);
+                break;
+            case 3:
+
+                p.innerText = Array.from(db.examStudent(given)).join('\n')
+                    
+                break;
+            case 4:
+                 p.innerText = Array.from(db.getStudentByCourse(given)).join('\n')
+                break;
+            case 5:
+                 p.innerText = Array.from(db.roomCourse(given)).join('\n')
+
+                break;
+            case 6:
+                p.innerText = db.roomCourse(given).size;
+
+                break;
+            case 7:
+                // return stumap -> show only GPA and letter.
+
+                let temp=""
+                for (let  s of db.stumap.values()) {
+                   
+                   temp +=s.name+"\t" +s.letter+"\n"
+                }
+                p.innerText = temp
+                break;
+        }
+    };
+
+
+
+    // this.hideInputs();
+
+</script>
+
+</html>
