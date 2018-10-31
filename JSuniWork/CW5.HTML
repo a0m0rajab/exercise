@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fetch Remote File </title>
+</head>
+
+<script>
+    "use strict";
+    let local = []
+    let remote;
+    function fileSelect(evt) {
+        local = []
+        var files = evt.files; // FileList object
+
+        for (let file of files) {
+            let reader = new FileReader();
+
+            reader.onload = function () {
+                // out.innerText +=reader.result +"\n";
+                local.push({ data: reader.result, name: file.name });
+            }
+            reader.readAsText(file);
+          
+        }
+    }
+    function readText() {
+
+        fetch(url.value)
+            .then(r => r.text())
+            //response of fetch() is r
+            .then(t => remote = t).then(compare);
+
+        //response of text() is t
+    }
+    function compare() {
+        
+        let text = "";
+        local.forEach(file => { 
+            if(file.data == remote){
+                text = " "+file.name +" has the same content"
+                // console.log("equal")
+            }
+        }
+
+        )
+        out.innerText=""
+        out.innerText = local.length +" files reader"+ text;
+       
+    }
+
+</script>
+
+<body>
+
+    <h2 id=title></h2>
+
+    <input type=text id=url value="https://maeyler.github.io/BLM305/README.md">
+    <!--onChange="readText()"-->
+    <!-- <input type="file" id="files" name="files[]" onChange="fileSelect()" multiple /> -->
+    <input type=file id=button onChange='fileSelect(this)' multiple />
+    <input type=button value="Compare" onClick="readText()">
+
+    <!-- <input type=button value="compare" onClick="compare()"> -->
+
+    <pre id=out></pre>
+
+    <hr />
+    <b>Sample code</b>
+    <pre id=sample></pre>
+    <hr />
+
+    <script>
+        title.innerText = document.title;
+
+    </script>
+
+</body>
+
+</html>
