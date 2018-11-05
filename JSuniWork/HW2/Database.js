@@ -56,7 +56,7 @@ class Course {
   }
 
   toString() {
-    return "Coruse name: " + this.name
+    return "Coruse name: " + this.name +"\n"+this.time
   }
 }
 
