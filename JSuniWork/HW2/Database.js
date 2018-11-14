@@ -13,25 +13,25 @@ class Student {
   // One more query of your choice
   getLetter(gpa) {
     //https://stackoverflow.com/questions/6665997/switch-statement-for-greater-than-less-than
-    if (gpa>3.5){
+    if (gpa > 3.5) {
       return "AA"
     }
-    if (gpa>3){
+    if (gpa > 3) {
       return "BA"
     }
-    if (gpa>2.5){
+    if (gpa > 2.5) {
       return "BB"
     }
-    if (gpa>2){
+    if (gpa > 2) {
       return "CB"
     }
-    if (gpa>1.5){
+    if (gpa > 1.5) {
       return "CC"
     }
 
     return "FF"
-   
-    
+
+
   }
   addCourses(...course) {
     for (let c of course) this.courses.push(c)
@@ -56,7 +56,7 @@ class Course {
   }
 
   toString() {
-    return "Coruse name: " + this.name +"\n"+this.time
+    return "Coruse name: " + this.name + "\n" + this.time
   }
 }
 
@@ -76,10 +76,11 @@ class DataBase {
   }
   // A random student
   getRandomStudent() {
-    let i = Math.trunc(this.stumap.size * Math.random());
-    console.log(this.stumap.get(i));
-    return this.stumap.get(i);
-
+    // let i = Math.trunc(this.stumap.size * Math.random());
+    // console.log(this.stumap.get(i));
+    // return this.stumap.get(i);
+    let keys = Array.from(this.stumap.keys());
+    return keys[Math.floor(Math.random() * keys.length)];
   }
   // Number of students above a given GPA
   getAboveGPA(num = 0) {
@@ -183,8 +184,9 @@ function addStudents(txt) {
   let msg = txt.length + " chars, ";
   let a = txt.split("\n");
   msg += a.length + " lines, ";
-  for (let i = 0; a.length > i; i++) {
-    db.stumap.set(i, parseStudent(a[i]));
+  for (let l of a) {
+    let s = parseStudent(l)
+    db.stumap.set(s.id, s);
 
   }
 
