@@ -1,0 +1,35 @@
+  html {
+      padding: 2em;
+      background: #111;
+    }
+    
+    /* .zelda-old-man {
+    
+    } */
+    .zelda-old-man {
+      position: absolute;
+      top: 40px; 
+      left: 40px;
+      font-size: .5em;
+      margin-left: 5em;
+      content: '';
+      display: block;
+      height: 1em;
+      width: 1em;
+      box-shadow: 1em 0em #fdb355, 2em 0em #fdb355, 3em 0em #fdb355, 4em 0em #fdb355, 5em 0em #fdb355, 6em 0em #fdb355, 0em 1em #edfff3, 1em 1em #fdb355, 2em 1em #edfff3, 3em 1em #fdb355, 4em 1em #fdb355, 5em 1em #edfff3, 6em 1em #fdb355, 7em 1em #edfff3, 0em 2em #fdb355, 1em 2em #fdb355, 2em 2em #111, 3em 2em #fdb355, 4em 2em #fdb355, 5em 2em #111, 6em 2em #fdb355, 7em 2em #fdb355, 0em 3em #fdb355, 1em 3em #fdb355, 2em 3em #111, 3em 3em #fdb355, 4em 3em #fdb355, 5em 3em #111, 6em 3em #fdb355, 7em 3em #fdb355, 0em 4em #e73e00, 1em 4em #edfff3, 2em 4em #fdb355, 3em 4em #fdb355, 4em 4em #fdb355, 5em 4em #fdb355, 6em 4em #edfff3, 7em 4em #e73e00, -1em 5em #e73e00, 0em 5em #edfff3, 1em 5em #edfff3, 2em 5em #edfff3, 3em 5em #edfff3, 4em 5em #edfff3, 5em 5em #edfff3, 6em 5em #edfff3, 7em 5em #edfff3, 8em 5em #e73e00, -2em 6em #e73e00, -1em 6em #e73e00, 0em 6em #edfff3, 1em 6em #edfff3, 2em 6em #111, 3em 6em #111, 4em 6em #111, 5em 6em #111, 6em 6em #edfff3, 7em 6em #edfff3, 8em 6em #e73e00, 9em 6em #e73e00, -3em 7em #e73e00, -2em 7em #e73e00, -1em 7em #edfff3, 0em 7em #edfff3, 1em 7em #e73e00, 2em 7em #edfff3, 3em 7em #edfff3, 4em 7em #edfff3, 5em 7em #edfff3, 6em 7em #e73e00, 7em 7em #edfff3, 8em 7em #edfff3, 9em 7em #e73e00, 10em 7em #e73e00, -4em 8em #fdb355, -3em 8em #e73e00, -2em 8em #e73e00, -1em 8em #edfff3, 0em 8em #e73e00, 1em 8em #e73e00, 2em 8em #edfff3, 3em 8em #edfff3, 4em 8em #edfff3, 5em 8em #edfff3, 6em 8em #e73e00, 7em 8em #e73e00, 8em 8em #edfff3, 9em 8em #e73e00, 10em 8em #e73e00, 11em 8em #fdb355, -4em 9em #fdb355, -3em 9em #e73e00, -2em 9em #e73e00, -1em 9em #e73e00, 0em 9em #e73e00, 1em 9em #e73e00, 2em 9em #edfff3, 3em 9em #edfff3, 4em 9em #edfff3, 5em 9em #edfff3, 6em 9em #e73e00, 7em 9em #e73e00, 8em 9em #e73e00, 9em 9em #e73e00, 10em 9em #e73e00, 11em 9em #fdb355, -4em 10em #fdb355, -3em 10em #e73e00, -2em 10em #e73e00, -1em 10em #e73e00, 1em 10em #e73e00, 2em 10em #e73e00, 3em 10em #edfff3, 4em 10em #edfff3, 5em 10em #e73e00, 6em 10em #e73e00, 8em 10em #e73e00, 9em 10em #e73e00, 10em 10em #e73e00, 11em 10em #fdb355, -3em 11em #e73e00, -2em 11em #e73e00, -1em 11em #e73e00, 1em 11em #e73e00, 2em 11em #e73e00, 3em 11em #e73e00, 4em 11em #e73e00, 5em 11em #e73e00, 6em 11em #e73e00, 8em 11em #e73e00, 9em 11em #e73e00, 10em 11em #e73e00, -3em 12em #e73e00, -2em 12em #e73e00, -1em 12em #e73e00, 1em 12em #e73e00, 2em 12em #e73e00, 3em 12em #e73e00, 4em 12em #e73e00, 5em 12em #e73e00, 6em 12em #e73e00, 8em 12em #e73e00, 9em 12em #e73e00, 10em 12em #e73e00, -2em 13em #e73e00, 1em 13em #e73e00, 2em 13em #e73e00, 3em 13em #e73e00, 4em 13em #e73e00, 5em 13em #e73e00, 6em 13em #e73e00, 9em 13em #e73e00, -2em 13em #e73e00, 0em 13em #e73e00, 1em 13em #e73e00, 2em 13em #e73e00, 3em 13em #e73e00, 4em 13em #e73e00, 5em 13em #e73e00, 6em 13em #e73e00, 7em 13em #e73e00, 9em 13em #e73e00, 0em 14em #e73e00, 1em 14em #e73e00, 2em 14em #e73e00, 3em 14em #e73e00, 4em 14em #e73e00, 5em 14em #e73e00, 6em 14em #e73e00, 7em 14em #e73e00, -1em 15em #e73e00, 0em 15em #e73e00, 1em 15em #fdb355, 2em 15em #fdb355, 3em 15em #e73e00, 4em 15em #e73e00, 5em 15em #fdb355, 6em 15em #fdb355, 7em 15em #e73e00, 8em 15em #e73e00;
+    }
+
+    /* tent */
+    /* .camp
+  {
+    z-index:10;
+    position:absolute;
+    bottom:40%;
+    left:50%;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #EBD090;
+    border-radius:5%
+  } */

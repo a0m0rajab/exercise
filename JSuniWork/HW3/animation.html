@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zelda man moving around</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="animation.css">
+
+</head>
+
+<body>
+    <input type="button" onclick="right()" value="right">
+    <input type="button" onclick="left()" value="left">
+    <input type="button" onclick="up()" value="up">
+    <input type="button" onclick="down();" value="down">
+    <input type="button" onclick="stop();" value="stop">
+    <input type="button" onclick="reset();" value="reset">
+
+    <div id="container" >
+        <div id="rightLeft">
+            <div id="old-man" class="zelda-old-man"></div>
+
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    
+    let oldMan = document.getElementById("old-man")
+    let rightLeft = document.getElementById("rightLeft")
+    let moveRight = { transform: ["translateX(0)", "translateX(100vw)"] }
+    let moveDown = { transform: ["translateY(0)", "translateY(100vw)"] }
+    let h = rightLeft.animate(
+        moveRight
+        , 8000);
+    h.pause()
+    let a = oldMan.animate(
+        moveDown
+        , 8000);
+    a.pause()
+    // a.pause()
+    function right() {
+        h.playbackRate = 1;
+        h.play()
+        // { transform: ["translateX(0)", "translateX(300px)", "translateX(0)"], transform: ["translateY(0)", "translateY(300px)", "translateY(0)"] }, 5000);
+        console.log(oldMan.getAnimations)
+    }
+    function stop() {
+        a.pause()
+        h.pause()
+    }
+    function up() {
+        a.play();
+        a.playbackRate = -1;
+    }
+    function left() {
+        h.playbackRate = -1;
+        h.play()
+    }
+    function down() {
+        a.playbackRate = 1;
+
+        a.play();
+    }
+    function reset() {
+        a.finish()
+        h.finish()
+    }
+    // function save() {
+    //     oldManStyle.backgroundPositionX = oldMan.getBoundingClientRect().x;
+    //     oldManStyle.y = oldMan.getBoundingClientRect().y;
+    // }
+</script>
+
+</html>
