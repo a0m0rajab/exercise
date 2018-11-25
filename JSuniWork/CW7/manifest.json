@@ -1,0 +1,13 @@
+{
+    "name": "abdurrahman RAJAB's App",
+    "start_url": "exercise/JSuniWork/CW7/PWA_test.html",
+    "display": "standalone",
+    "background_color": "plum",
+    "icons": [
+      {
+        "src": "phoenix.jpg",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
