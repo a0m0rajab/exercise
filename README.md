@@ -2,7 +2,7 @@
 
 ## Github Repo:
 
-(my github)[https://github.com/a0m0rajab/exercise]
+[my github](https://github.com/a0m0rajab/exercise)
 
 ## Class Works
 
