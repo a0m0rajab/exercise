@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="faker.js"></script>
+    <title>CW7 Table </title>
+</head>
+<style>
+    table { border-collapse: collapse; }
+    th { color: rgb(235, 252, 5); padding: 5px 5px; }
+    td { 
+        border: 1px solid rgb(30, 255, 0); 
+        padding: 5px 5px; 
+        text-align: center; 
+    }
+</style>
+<script>
+    "use strict";
+    function add() {
+        let t = [["name", "E-mail", "city"]];
+        for (let index = 0; index < loop.value; index++) {
+            t.push([faker.name.findName(), faker.internet.email(), faker.address.city()]);
+
+        }
+
+        createTable(t)
+    }
+
+
+
+
+
+
+    function createTable(tableData) {
+        var table = document.getElementById('table');
+        table.innerHTML = "";
+        var tableBody = document.createElement('tbody');
+
+        tableData.forEach(function (rowData) {
+            var row = document.createElement('tr');
+
+            rowData.forEach(function (cellData) {
+                var cell = document.createElement('td');
+                cell.appendChild(document.createTextNode(cellData));
+                row.appendChild(cell);
+            });
+
+            tableBody.appendChild(row);
+        });
+
+        table.appendChild(tableBody);
+        //document.body.appendChild(table);
+        console.log("table created")
+    }
+
+</script>
+
+<body>
+    <h2 id=title></h2>
+
+    <p id=outA></p>
+    number of fake data:<input type=number id="loop" value="10">
+    <br>
+    <input type=button value="add" onClick="add()">
+
+
+    <hr>
+    <div id=table></div>
+    <hr />
+
+
+    <script>
+        title.innerText = "CW7";
+    //  reportA("start");
+    </script>
+
+</body>
+
+</html>
