@@ -1,0 +1,20 @@
+{
+  "name": "exercise",
+  "short_name": "exercise ",
+  "description": "Class works and homeWorks for BLM305",
+  "start_url": "/exercise/",
+  "display": "standalone",
+  "background_color": "grey",
+  "theme_color": "grey",
+  "icons": [
+    {
+      "src": "JSuniWork/CW7/geek.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }, {
+      "src": "JSuniWork/CW7/geek.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

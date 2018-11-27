@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+  <title>BLM305 HomePage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="JSuniWork/CW7/geek.png">
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", sans-serif
+    }
+  </style>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/JSuniWork/sw.js')
+        .then((reg) => { console.log('SW starts', reg.active) })
+        .catch(console.log)
+    }
+  </script>
+</head>
+
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="w3-container">
+      <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <img src="https://avatars3.githubusercontent.com/u/18273833" style="width:100%;" class="w3-round"><br><br>
+      <h4><b>Abdurrahman RAJAB </b></h4>
+    </div>
+
+    <div class="w3-panel w3-large">
+      <a class="fa fa-github w3-hover-opacity" href="https://github.com/a0m0rajab"></a>
+      <a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/a0m0rajab"></a>
+      <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/a0m0rajab"></a>
+      <a class="fa fa-twitter w3-hover-opacity" href="https://www.twitter.com/rajab_2"></a>
+      <a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/in/a0m0rajab"></a>
+    </div>
+  </nav>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px">
+
+    <!-- Header -->
+    <header id="portfolio">
+      <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+      <div class="w3-container">
+        <h1><b>Advanced Programming Techniques - BLM305</b></h1>
+
+      </div>
+    </header>
+
+    <!-- First Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-quarter w3-container">
+        <div class="w3-container w3-white">
+          <p><b>CW0 - Introduction</b></p>
+          <p>Introduction to HTML and JS, solved the
+            <a href="http://eloquentjavascript.net/02_program_structure.html#p_1pkxSCSkVg">Chessboard</a>
+            exercise at the end Chap 2 of <a href="http://eloquentjavascript.net/">eloquent javascript book</a></p>
+          <div>
+
+            <a href="https://groups.google.com/forum/#!topic/fsmvu-mae/1gn41Vtkj6Y" class="w3-btn w3-white w3-border w3-border-grey w3-round">Question</a>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter w3-container">
+        <div class="w3-container w3-white">
+          <p><b>CW1 - making a web page</b></p>
+          <p>Making a web page using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>
+            methods.</p>
+          <div>
+            <a href="https://groups.google.com/forum/#!topic/fsmvu-mae/IvKDmXMwrM8" class="w3-btn w3-white w3-border w3-border-grey w3-round">Question</a>
+            <br>
+            <br>
+            <a href="JSuniWork/CW1.html" class="w3-btn w3-white w3-border w3-border-grey w3-round">Work</a>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter w3-container">
+        <div class="w3-container w3-white">
+          <p><b>CW2 - Objects and Arrays</b></p>
+          <p>solved the
+            <a href="http://eloquentjavascript.net/04_data.html#h_TcUD2vzyMe">The sum of a range</a>
+            exercise at the end Chap 4 of <a href="http://eloquentjavascript.net/">eloquent javascript book</a>
+            Modified analyze() method so that it counts the number days for each event type.</p>
+          <div>
+            <a href="https://groups.google.com/forum/#!topic/fsmvu-mae/hwM_bADloQU" class="w3-btn w3-white w3-border w3-border-grey w3-round">Question</a>
+            <br>
+            <br>
+            <a href="CW2/roadMap.md" class="w3-btn w3-white w3-border w3-border-grey w3-round">work</a>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter w3-container">
+        <div class="w3-container w3-white">
+          <p><b>CW3 - Inspector</b></p>
+          <p>tickling The <a href="https://maeyler.github.io/JS/sss/">Inspector </a>.</p>
+          <div>
+            <a href="https://groups.google.com/forum/#!topic/fsmvu-mae/-5ONDWb77fY" class="w3-btn w3-white w3-border w3-border-grey w3-round">Question</a>
+            <br>
+            <br>
+            <a href="JSuniWork/index.html" class="w3-btn w3-white w3-border w3-border-grey w3-round">Work</a>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br>
+
+    <!-- Second Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-quarter w3-container">
+        <div class="w3-container w3-white">
+          <p><b>CW4 - File </b></p>
+          <p>You will open a remote file and some local files together and comparing them.</p>
+          <div>
+            <a href="https://groups.google.com/forum/#!msg/fsmvu-mae/YbEWQyVvejk/uQsmi5WuCAAJ" class="w3-btn w3-white w3-border w3-border-grey w3-round">Question</a>
+            <br>
+            <br>
+            <a href="JSuniWork/CW5.HTML" class="w3-btn w3-white w3-border w3-border-grey w3-round">Work</a>
+          </div>
+          <br>
+
+        </div>
+      </div>
+      <div class="w3-quarter w3-container">
+        <div class="w3-container w3-white">
+          <p><b>CW5 - Timing</b></p>
+          <p>Comparing map and array using Time measurement methods.</p>
+          <div>
+            <a href="https://groups.google.com/forum/#!msg/fsmvu-mae/qx3MEdIdMtI/gp9TLgNOBQAJ" class="w3-btn w3-white w3-border w3-border-grey w3-round">Question</a>
+            <br>
+            <br>
+            <a href="JSuniWork/cw6.html" class="w3-btn w3-white w3-border w3-border-grey w3-round">Work</a>
+          </div>
+          <br>
+        </div>
+      </div>
+      <div class="w3-quarter w3-container">
+        <div class="w3-container w3-white">
+          <p><b>CW7 - DOM and PWA</b></p>
+          <p>Making PWA and Some tables using DOM.</p>
+          <div>
+            <a href="https://groups.google.com/forum/#!msg/fsmvu-mae/FS_53-wdnc0/quWV2wFHAQAJ" class="w3-btn w3-white w3-border w3-border-grey w3-round">Question</a>
+            <br>
+            <br>
+            <a href="CW7/roadMap.md" class="w3-btn w3-white w3-border w3-border-grey w3-round">Work</a>
+          </div>
+          <br>
+        </div>
+      </div>
+      <div class="w3-quarter w3-container w3-hide	">
+        <div class="w3-container w3-white">
+          <p><b>CW7</b></p>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue
+            gravida diam non fringilla.</p>
+          <div>
+            <a href="#" class="w3-btn w3-white w3-border w3-border-grey w3-round">Link Button</a>
+            <br>
+            <br>
+            <a href="#" class="w3-btn w3-white w3-border w3-border-grey w3-round">Link Button</a>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- third Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-hide	">
+        <div class="w3-container w3-white">
+          <p><b>CW8</b></p>
+          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue
+            gravida diam non fringilla.</p>
+          <div>
+            <a href="#" class="w3-btn w3-white w3-border w3-border-grey w3-round">Link Button</a>
+            <br>
+            <br>
+            <a href="#" class="w3-btn w3-white w3-border w3-border-grey w3-round">Link Button</a>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-hide	">
+        <div class="w3-container w3-white">
+          <p><b>CW9</b></p>
+          <p>coming soon.</p>
+          <div>
+            <a href="#" class="w3-btn w3-white w3-border w3-border-grey w3-round">Link Button</a>
+            <br>
+            <br>
+            <a href="#" class="w3-btn w3-white w3-border w3-border-grey w3-round">Link Button</a>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <div class="w3-container w3-white">
+          <p><b>HW0 - Course Data </b></p>
+          <p>Using user inputs to add student , get average of them and show their grades by using arrays.</p>
+          <div>
+            <a href="https://groups.google.com/d/msg/fsmvu-mae/9zz_tXebdb0/Bpd_v0ULAQAJ" class="w3-btn w3-white w3-border w3-border-grey w3-round">Question</a>
+            <br>
+            <br>
+            <a href="JSuniWork/HW1.html" class="w3-btn w3-white w3-border w3-border-grey w3-round">Work</a>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br>
+
+    <!-- forth Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container">
+        <div class="w3-container w3-white">
+          <p><b>HW1 - Student Database</b></p>
+          <p>Read file remotle, working on classes and maps.</p>
+          <div>
+            <a href="https://groups.google.com/d/msg/fsmvu-mae/9zz_tXebdb0/EwhcpcJ9BgAJ" class="w3-btn w3-white w3-border w3-border-grey w3-round">Question</a>
+            <br>
+            <br>
+            <a href="JSuniWork/HW2/Database.html" class="w3-btn w3-white w3-border w3-border-grey w3-round">work</a>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <div class="w3-container w3-white">
+          <p><b>HW2 - Animation </b></p>
+          <p>Using Java Script to make animation.</p>
+          <div>
+            <a href="https://groups.google.com/d/msg/fsmvu-mae/9zz_tXebdb0/LCuvfxd6AAAJ" class="w3-btn w3-white w3-border w3-border-grey w3-round">Question</a>
+            <br>
+            <br>
+            <a href="JSuniWork/HW3/animation.html" class="w3-btn w3-white w3-border w3-border-grey w3-round">Work</a>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <div class="w3-container w3-white">
+          <p><b>HW3 - My Home Page </b></p>
+          <p>Making Home Page as PWA and desgining it.</p>
+          <div>
+            <a href="https://groups.google.com/d/msg/fsmvu-mae/9zz_tXebdb0/ohONnfLoAgAJ" class="w3-btn w3-white w3-border w3-border-grey w3-round">Question</a>
+            <br>
+            <br>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <br>
+
+    <!-- UseFull links Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-container">
+        <div class="w3-container w3-white">
+          <p><b>Usefull links</b></p>
+          <a href="https://web.dev/" class="w3-btn w3-white w3-border w3-border-blue w3-round">Google web Development
+            Site</a>
+          <a href="https://codepen.io/" class="w3-btn w3-white w3-border w3-border-grey w3-round">Code pen Platform</a>
+          <a href="https://www.fsf.org/" class="w3-btn w3-white w3-border w3-border-blue w3-round">Free software
+            foundation. </a>
+          <a href="https://www.gnu.org/philosophy/shouldbefree.en.html" class="w3-btn w3-white w3-border w3-border-grey w3-round">free
+            software philosophy.</a>
+
+          <br><br>
+          <a href="https://keep.google.com" class="w3-btn w3-white w3-border w3-border-blue w3-round">Google keeps for
+            notes.</a>
+          <a href="https://trello.com/" class="w3-btn w3-white w3-border w3-border-grey w3-round">Trello for planning
+            and teamWork.</a>
+
+          <br>
+          <br>
+        </div>
+      </div>
+
+
+    </div>
+    <br>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-dark-grey">
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <h3>ِAbout lesson</h3>
+          <p>BLM305 advanged programming at FSMVU.</p>
+          <p><a href="fsm.edu.tr" target="_blank">University link </a></p>
+        </div>
+
+        <div class="w3-third">
+          <h3>ِAbout Me</h3>
+          <p>Computer science student 3rd grade.</p>
+          <p> <a href="github.com/a0m0rajab" target="_blank">Github page</a></p>
+        </div>
+        <div class="w3-third">
+          <h3>ِAbout Instructor</h3>
+          <p>Mehmet Akif eyler get his <a href="http://www.genealogy.ams.org/id.php?id=81183">PHD</a> from Harvard
+            University at 1980.</p>
+          <p> <a href="github.com/maeyler " target="_blank">Github Page</a></p>
+        </div>
+
+      </div>
+    </footer>
+
+    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
+        title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+    <!-- End page content -->
+  </div>
+
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>

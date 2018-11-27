@@ -6,16 +6,15 @@
 
 ## Class Works
 
-| No      | Code/web-page                        | question                                                                   |
-| ------- | ------------------------------------ | -------------------------------------------------------------------------- |
-| :zero:  | []()                                 | [link](https://groups.google.com/forum/#!topic/fsmvu-mae/1gn41Vtkj6Y)      |
-| :one:   | [work one](JSuniWork/CW1.html)       | [link](https://groups.google.com/forum/#!topic/fsmvu-mae/IvKDmXMwrM8)      |
-| :two:   | [work two](JSuniWork/CW2/roadMap.md) | [link](https://groups.google.com/forum/#!topic/fsmvu-mae/hwM_bADloQU)      |
-| :three: | [inspector](JSuniWork/index.html)    | [link](https://groups.google.com/forum/#!topic/fsmvu-mae/-5ONDWb77fY)      |
-| :five:  | [work five](JSuniWork/CW5.HTML)      | [link](https://groups.google.com/d/msg/fsmvu-mae/YbEWQyVvejk/uQsmi5WuCAAJ) |
-| :six:   | [work six](JSuniWork/cw6.html)       | [link](https://groups.google.com/d/msg/fsmvu-mae/qx3MEdIdMtI/gp9TLgNOBQAJ) |
-| :seven:   | [table generator](JSuniWork/CW7/cw7.html)       | [link](https://groups.google.com/d/msg/fsmvu-mae/FS_53-wdnc0/quWV2wFHAQAJ) |
-| :seven:   | [PWA_test](JSuniWork/CW7/PWA_test.html)       | [link](https://groups.google.com/d/msg/fsmvu-mae/FS_53-wdnc0/quWV2wFHAQAJ) |
+| No      | Code/web-page                          | question                                                                   |
+| ------- | -------------------------------------- | -------------------------------------------------------------------------- |
+| :zero:  | []()                                   | [link](https://groups.google.com/forum/#!topic/fsmvu-mae/1gn41Vtkj6Y)      |
+| :one:   | [work one](JSuniWork/CW1.html)         | [link](https://groups.google.com/forum/#!topic/fsmvu-mae/IvKDmXMwrM8)      |
+| :two:   | [work two](JSuniWork/CW2/roadMap.md)   | [link](https://groups.google.com/forum/#!topic/fsmvu-mae/hwM_bADloQU)      |
+| :three: | [inspector](JSuniWork/index.html)      | [link](https://groups.google.com/forum/#!topic/fsmvu-mae/-5ONDWb77fY)      |
+| :five:  | [work five](JSuniWork/CW5.HTML)        | [link](https://groups.google.com/d/msg/fsmvu-mae/YbEWQyVvejk/uQsmi5WuCAAJ) |
+| :six:   | [work six](JSuniWork/cw6.html)         | [link](https://groups.google.com/d/msg/fsmvu-mae/qx3MEdIdMtI/gp9TLgNOBQAJ) |
+| :seven: | [Work seven](JSuniWork/CW7/roadMap.md) | [link](https://groups.google.com/d/msg/fsmvu-mae/FS_53-wdnc0/quWV2wFHAQAJ) |
 
 
 
