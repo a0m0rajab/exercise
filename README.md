@@ -15,6 +15,7 @@
 | :five:  | [work five](JSuniWork/CW5.HTML)        | [link](https://groups.google.com/d/msg/fsmvu-mae/YbEWQyVvejk/uQsmi5WuCAAJ) |
 | :six:   | [work six](JSuniWork/cw6.html)         | [link](https://groups.google.com/d/msg/fsmvu-mae/qx3MEdIdMtI/gp9TLgNOBQAJ) |
 | :seven: | [Work seven](JSuniWork/CW7/roadMap.md) | [link](https://groups.google.com/d/msg/fsmvu-mae/FS_53-wdnc0/quWV2wFHAQAJ) |
+| :eight: | [Work eight](JSuniWork/cw8.html)       | [link](https://groups.google.com/forum/#!topic/fsmvu-mae/ATkjUn3RlFo)      |
 
 
 

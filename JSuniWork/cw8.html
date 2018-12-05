@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Canvas Drawing </title>
+
+    <style>
+        svg, canvas {
+        background: cyan;
+        font: 10px arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+    <br>
+    inner Colour <input type="color" id="colInner" value="#ff0000" onchange="inner(this.value)">
+    <br>
+    outer Colour <input type="color" id="colOuter" value="#ff0090" onchange="outer(this.value)">
+    <br>
+    background Colour <input type="color" id="colBackground" value="#f9e81a" onchange="background(this.value)">
+    <!-- arc -->
+    <!-- x y radious startangle end angle  anticlock wise -->
+    <!-- rect -->
+    <!-- x y width height -->
+    <br>
+    <!-- Art X :
+    <input type="number" id="artX" value="50" style="width:50px">
+    Art Y :
+    <input type="number" id="artY" value="50" style="width:50px"> -->
+    <br>
+    text :
+    <input type="text" id="inpT" value="test" style="width:50px" onchange="text()">
+    text X :
+    <input type="number" id="inpX" value="50" style="width:50px" onchange="text()">
+    text Y :
+    <input type="number" id="inpY" value="50" style="width:50px" onchange="text()">
+    <br>
+    Line Width :
+    <input type="number" id="lineWidth" value="6" style="width:50px" step="5">
+    <!-- <input type="button" onclick="clear();" value="clear"> -->
+    <!-- <button type="button" onclick="clear">Clear!</button> -->
+    <br>
+    <select id="mySelect" onchange="choosen()">
+    </select>
+    <!-- <button type="button" onclick="">Draw!</button> -->
+
+
+    <br>
+
+
+    <h2> Canvas</h2>
+    <canvas id=canvas style="display: block;" ></canvas>
+    <p>Press on the canvas to draw a circle or rectangle</p>
+    <pre id=sample></pre>
+
+    <hr />
+
+    <p>Ref: <i>Eloquent JavaScript</i>,
+        <a href="http://eloquentjavascript.net/17_canvas.html" target="ExternalDocument"> Chap 17</a>
+    </p>
+
+    <script>
+        "use strict";
+        const cx = canvas.getContext("2d");
+
+        function all() {
+            outer()
+            inner()
+            text()
+        }
+
+        function inner(value) {
+            cx.fillStyle = value;
+
+        }
+        function outer(value) {
+            cx.strokeStyle = value;
+
+        }
+        function background(value) {
+            console.log(value)
+            canvas.style.background = value;
+
+        }
+        function clear() {
+            cx.clearRect(0, 0, canvas.width, canvas.height);
+
+        }
+        function text() {
+            cx.fillText(inpT.value, inpX.value, inpY.value);
+        }
+        function circle(x, y) {
+            cx.beginPath();
+            cx.lineWidth = lineWidth.value;
+            cx.arc(x, y, 40, 0, 2 * Math.PI);
+            cx.fill(); cx.stroke();
+            // cx.fillStyle = "black";
+
+
+        }
+        function rect(x, y) {
+            cx.beginPath();
+            cx.lineWidth = lineWidth.value;
+            // cx.fillStyle = "pink";
+            // cx.strokeStyle = "red";
+            cx.rect(x, y, 100, 80);
+            cx.fill();
+            cx.stroke();
+            // cx.fillStyle = "black";
+            // cx.fillText("rect", 148, 55);
+        }
+        // sample.innerText = draw;
+        // draw();
+        function selector() {
+            let ar = [
+                "circle", "rectangle"]
+            ar.forEach(opt => {
+                let option = document.createElement("option");
+                option.text = opt;
+                document.getElementById("mySelect").add(option);
+            });
+        }
+        function choosen() {
+            let selectNo = document.getElementById("mySelect").selectedIndex;
+            if (selectNo == 0) {
+                clear();
+
+                all();
+                // circle(artX.value, artY.value);
+            }
+            else if (selectNo == 1) {
+                clear();
+                all();
+                // rect(artX.value, artY.value);
+
+            }
+        }
+        function init() {
+            cx.fillStyle = colInner.value;
+            cx.strokeStyle = colOuter.value;
+            canvas.style.background = colBackground.value;
+
+            selector();
+
+        }
+        canvas.addEventListener('click', test);
+        function test(e) {
+            console.log(e.clientX)
+            console.log(e.clientY)
+            let x = e.clientX -12;
+            let y = e.clientY -258
+            let selectNo = document.getElementById("mySelect").selectedIndex;
+            if (selectNo == 0) {
+                clear();
+
+                all();
+                circle(x, y);
+            }
+            else if (selectNo == 1) {
+                clear();
+                all();
+                rect(x, y);
+
+            }
+            // console.log(e.clientY)
+
+        }
+        init();
+    </script>
+
+</body>
+
+</html>
