@@ -86,14 +86,15 @@
         <!-- <div class="w3-quarter w3-container">
             <h2>w3-third</h2>
         </div> -->
-        <hr>
-        <pre>
+
+    </div>
+    <hr>
+    <pre>
             ref :
             <a href="https://wit.ai">Wit Ai</a>
             <a href="https://www.w3schools.com/w3css/">W3 css</a>
 
         </pre>
-    </div>
     <script>
         let msg;
         let turn = 0;
@@ -160,65 +161,39 @@
             let text = JSON.stringify(json);
             console.log(typeof JSON.parse(text))
             if (json.entities.greetings || 0) {
-                json.entities.greetings.forEach(x => { if (x.confidence > 0.9) { greeting() } })
-            } else if (json.entities.greetings || 0) {
-                json.entities.greetings.forEach(x => { if (x.confidence > 0.9) { greeting() } })
-            } else if (json.entities.greetings || 0) {
-                json.entities.greetings.forEach(x => { if (x.confidence > 0.9) { greeting() } })
-            } else if (json.entities.greetings || 0) {
-                json.entities.greetings.forEach(x => { if (x.confidence > 0.9) { greeting() } })
-            } else if (json.entities.greetings || 0) {
-                json.entities.greetings.forEach(x => { if (x.confidence > 0.9) { greeting() } })
-            } else if (json.entities.greetings || 0) {
-                json.entities.greetings.forEach(x => { if (x.confidence > 0.9) { greeting() } })
-            } else if (json.entities.greetings || 0) {
-                json.entities.greetings.forEach(x => { if (x.confidence > 0.9) { greeting() } })
-            } else if (json.entities.greetings || 0) {
-                json.entities.greetings.forEach(x => { if (x.confidence > 0.9) { greeting() } })
-            } else if (json.entities.greetings || 0) {
-                json.entities.greetings.forEach(x => { if (x.confidence > 0.9) { greeting() } })
+                json.entities.greetings.forEach(x => {
+                    if (x.confidence > 0.8) { greeting() } else {
+                        blockCreator("not sure if you are greetıng me but i am good :D ");
+                    }
+                })
+            } else if (json.entities.help || 0) {
+                blockCreator("the comamnds that avaialbe now is\n" +
+                    "hello , who made you , who are you" +
+                    "\nBtw, dont get upset my creator is still teaching me everyday :D ")
+            } else if (json.entities.maker || 0) {
+                blockCreator("built by abdurrahman RAJAB , github account : a0m0rajab  ");
+            } else if (json.entities.whoami || 0) {
+                blockCreator("I am an under developing bot made by abdurrahman rajab");
             } else {
                 unknown()
             }
+
+
+
             console.log(json)
             this.msg = json;
 
 
         }
         function unknown() {
-            blockCreator("sorry its unknown command please check them by using HELP \n we have defined only 7 basic information till now to check it please use \" help \" ")
+            blockCreator("sorry its unknown command please check them by using HELP \n we have defined only 3 basic information till now to check it please use \" help \" ")
         }
         function greeting() {
             blockCreator("hey, welcome to chat bot application for help you can use \"help\" ");
 
 
         }
-        function maker() {
-            blockCreator("built by abdurrahman RAJAB , github account : a0m0rajab ");
 
-
-        }
-        function philosophy() {
-            blockCreator("hey, why this question now?");
-
-
-        }
-        function hope() {
-            blockCreator("hope you to have a happy great day ");
-
-
-        }
-        function help() {
-            blockCreator("we have \n the follwoing stuff :ask about maker , philosophy , hope , greeting and eneding , help , asking about the program itself");
-        }
-        function whoami() { 
-            blockCreator("a chat bot that solve/answers few simple questions");
-
-        }
-        function howareyou() { 
-            blockCreator("good thanks , wish you all the best");
-
-        }
 
         // maker , philosophy , hope , how are you , help , whoami
         function events() {
